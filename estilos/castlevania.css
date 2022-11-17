@@ -11,11 +11,19 @@
     src: url(/fonts/Syne_Mono/SyneMono-Regular.ttf);
 }
 
+:root{
+    --spectral: Spectral, Arial, sans-serif;
+    --cinzel: Cinzel, Arial, sans-serif;
+}
+
 p{
-    font-family: Spectral, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Spectral, Arial, sans-serif;
     color: silver;
     font-size: 16px;
-    padding: 10px;  
+    margin: 10px 0;
+}
+h1{
+    font-family: var(--cinzel);
 }
 
 @media only screen and (max-width: 600px){
@@ -43,8 +51,18 @@ p{
     .intro{
         background: rgba(0, 0, 0, 0.6);
         width: 80%;
+        margin: 10px auto;
+        font-family: var(--spectral);
+        color: silver;
+        padding: 10px;
+    }
+    .historia{
+        background: rgba(0, 0, 0, 0.6);
+        width: 80%;
         margin: 0 auto;
-
+        font-family: var(--spectral);
+        color: silver;
+        padding: 10px;
     }
 
 

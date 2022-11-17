@@ -1,3 +1,8 @@
 imagenes: 
     logo : spascifica , https://www.steamgriddb.com/logo/29174
     fondo movil: frederick , https://www.pinterest.com/pin/382031980894423353/
+    richter vs dracula: @orioto, https://twitter.com/orioto/status/1060959170604793857
+info:
+    castlevania fandom:  https://castlevania.fandom.com/es/wiki/Castlevania:_Symphony_of_the_Night
+    the castlevania dungeon: https://castlevaniadungeon.net/
+    
