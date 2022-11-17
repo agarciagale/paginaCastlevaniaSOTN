@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Cinzel;
+    src: url(/fonts/Cinzel/Cinzel-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Spectral;
+    src: url(/fonts/Spectral/Spectral-Regular.ttf);
+}
+@font-face {
+    font-family: Syne Mono;
+    src: url(/fonts/Syne_Mono/SyneMono-Regular.ttf);
+}
+
+p{
+    font-family: Spectral, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: silver;
+    font-size: 16px;
+    padding: 10px;  
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        background-image: url(/pics/fondo.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .logo{
+        float: left;
+        margin-top: 10px;
+        width: 80%;
+        left: 20%;
+        
+    }
+    .fa-solid {
+        float: left;
+        padding: 11% 0;
+        width: 15%;
+        color: darkgrey;
+        text-align: center;
+        font-size: 50px;
+    }
+    .intro{
+        background: rgba(0, 0, 0, 0.6);
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+
+}
+@media only screen and (min-width:  600px){
+
+}
+@media only screen and (min-width: 1200px){
+    
+}

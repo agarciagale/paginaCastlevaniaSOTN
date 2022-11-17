@@ -1,0 +1,31 @@
+  /*reset*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color1:red;
+    --color2:green;
+    --color3:blue;
+    --fuente:Verdana, Geneva, Tahoma, sans-serif;
+    --col:12;
+}
+/*base*/
+body {
+    font-size: 1rem;
+    font-family: var(--fuente);
+}
+
+p {
+    line-height: 1.2rem;
+    font-size:.8rem;
+    margin-top: .4rem 0;
+}
+h1,        .h1 {
+    font-size: 1.5rem;
+}
+
+h2,        .h2 {
+    font-size: 1.3rem;
+}

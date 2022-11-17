@@ -1,0 +1,3 @@
+imagenes: 
+    logo : spascifica , https://www.steamgriddb.com/logo/29174
+    fondo movil: frederick , https://www.pinterest.com/pin/382031980894423353/
