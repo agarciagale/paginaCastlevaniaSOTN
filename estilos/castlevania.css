@@ -26,6 +26,14 @@ p{
 h1, h2{
     font-family: var(--cinzel);
 }
+div[class^="tabla"] {
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid darkblue;
+    border-radius: 2%;
+    background-color: rgba(140, 140, 140, 0.4);
+}
 
 @media only screen and (max-width: 600px){
     body{
@@ -89,10 +97,13 @@ h1, h2{
         text-align: center;
         color: slategrey;
     }
-    .tabla-alucard{
+    .arsenal{
+        background: rgba(0, 0, 0, 0.6);
         width: 80%;
-        margin: 0 auto;
-        
+        margin: 10px auto;
+        font-family: var(--spectral);
+        color: silver;
+        padding: 10px;
     }
 
 
