@@ -106,6 +106,73 @@ div[class^="tabla"] {
         padding: 10px;
     }
 
+/* Ajustes de tabla de armas */
+
+    .tabla-arsenal td{
+        border-bottom: 1px solid grey;
+        height: 131px;
+    }
+    .descArma{
+        border-right: 1px solid grey;
+        border-left: 1px solid grey;
+        padding: 5px;
+        text-align: center;
+    }
+
+    /* Sprites armas */ 
+
+    .crissaegrim{
+        background-image: url(/sprites/swords-sprites.png);
+        width: 100px;
+        background-size: cover;
+        background-position: 0px -160px;
+    }
+    .heavenSword{
+        background-image: url(/sprites/swords-sprites.png);
+        background-size: cover;
+        background-position: 0px 210px;
+    }
+    .jewelSword{
+        background-image: url(/sprites/swords-sprites.png);
+        background-size: cover;
+        background-position: 0px -255px;
+    }
+    .marsil{
+        background-image: url(/sprites/swords-sprites.png);
+        background-size: cover;
+        background-position: 0px 310px;
+    }
+    .masamune{
+        background-image: url(/sprites/swords-sprites.png);
+        background-size: cover;
+        background-position: 0px -345px;
+    }
+    .mourneblade{
+        background-image: url(/sprites/swords-sprites.png);
+        background-size: cover;
+        background-position: 0px 20px;
+    }
+    .muramasa{
+        background-image: url(/sprites/swords-sprites.png);
+        background-size: cover;
+        background-position: 0px -70px;
+    }
+    .osafune{
+        background-image: url(/sprites/swords-sprites.png);
+        background-size: cover;
+        background-position: 0px 110px;
+    }
+    .runeSword{
+        background-image: url(/sprites/swords-sprites.png);
+        background-size: cover;
+        background-position: 0px -440px;
+    }
+    .yasutsuna{
+        background-image: url(/sprites/swords-sprites.png);
+        background-size: cover;
+        background-position: 0px -530px;
+    }
+
 
 }
 @media only screen and (min-width:  600px){
