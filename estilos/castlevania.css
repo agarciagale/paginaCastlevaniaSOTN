@@ -36,11 +36,22 @@ div[class^="tabla"] {
 }
 
 @media only screen and (max-width: 600px){
+    .movil{
+        background: rgba(0, 0, 0, 0.6);
+        width: 80%;
+        margin: 10px auto;
+        font-family: var(--spectral);
+        color: silver;
+        padding: 10px;
+    }
     body{
         background-image: url(/pics/fondo.jpg);
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
+    }
+    .imgchiquita-movil{
+        width: 60%;
     }
     .logo{
         float: left;
@@ -57,22 +68,7 @@ div[class^="tabla"] {
         text-align: center;
         font-size: 50px;
     }
-    .intro{
-        background: rgba(0, 0, 0, 0.6);
-        width: 80%;
-        margin: 10px auto;
-        font-family: var(--spectral);
-        color: silver;
-        padding: 10px;
-    }
-    .historia{
-        background: rgba(0, 0, 0, 0.6);
-        width: 80%;
-        margin: 10px auto;
-        font-family: var(--spectral);
-        color: silver;
-        padding: 10px;
-    }
+    
     .spoiler{
         background: rgba(0, 1, 59, 0.6);
         width: 100%;
@@ -84,26 +80,21 @@ div[class^="tabla"] {
         color: darkred;
         font-family: var(--syne);
     }
-    .personajes{
-        background: rgba(0, 0, 0, 0.6);
-        width: 80%;
-        margin: 10px auto;
-        font-family: var(--spectral);
-        color: silver;
-        padding: 10px;
-    }
     .personajes section h2{
         margin-top: 20px;
         text-align: center;
         color: slategrey;
     }
-    .arsenal{
-        background: rgba(0, 0, 0, 0.6);
-        width: 80%;
-        margin: 10px auto;
-        font-family: var(--spectral);
-        color: silver;
-        padding: 10px;
+    .enemigos section h2{
+        margin-top: 20px;
+        text-align: center;
+        color: crimson;
+        border-bottom:2px solid crimson;
+        width: 70%;
+        margin: 20px auto;
+    }
+    .enemigos img{
+        margin: 20px auto;
     }
 
 /* Ajustes de tabla de armas */

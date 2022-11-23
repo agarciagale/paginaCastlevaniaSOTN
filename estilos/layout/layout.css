@@ -4,8 +4,6 @@
 .centrarimg{
     margin: 0 auto;
     display: block;
-    max-width: 80%;
-    min-width: 20%;
 }
 .centrarcontenedor{
     margin: 0 auto;
