@@ -1,14 +1,14 @@
 @font-face {
     font-family: Cinzel;
-    src: url(/fonts/Cinzel/Cinzel-VariableFont_wght.ttf);
+    src: url(../fonts/Cinzel/Cinzel-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: Spectral;
-    src: url(/fonts/Spectral/Spectral-Regular.ttf);
+    src: url(../fonts/Spectral/Spectral-Regular.ttf);
 }
 @font-face {
     font-family: Syne Mono;
-    src: url(/fonts/Syne_Mono/SyneMono-Regular.ttf);
+    src: url(../fonts/Syne_Mono/SyneMono-Regular.ttf);
 }
 
 :root{
@@ -39,12 +39,40 @@ div[class^="tabla"] {
     border-radius: 2%;
     background-color: rgba(140, 140, 140, 0.4);
 }
-.ul{
-    margin: 0 auto;
-    width: inherit;
+
+ul{
+    margin: 10px;
 }
 
-.movil{
+.nav{
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.nav a{
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: var(--cinzel);
+}
+
+.nav a:hover{
+    color: silver;
+}
+
+.video{
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+.seccion{
     background: rgba(0, 0, 0, 0.8);
     width: 80%;
     margin: 10px auto;
@@ -94,6 +122,10 @@ div[class^="tabla"] {
 
 /* Ajustes de tabla de armas */
 
+.div-tabla-arsenal{
+    overflow-x: auto;
+}
+
 .tabla-arsenal{
     margin: 0 auto;
 }
@@ -119,44 +151,44 @@ div[class^="tabla"] {
 /* Sprites armas */ 
 
 .crissaegrim{
-    background-image: url(/sprites/swords-sprites.png);
+    background-image: url(../sprites/swords-sprites.png);
     background-position: 0px -220px;
     
 }
 .heavenSword{
-    background-image: url(/sprites/swords-sprites.png);
+    background-image: url(../sprites/swords-sprites.png);
     background-position: 0px 230px;
 }
 .jewelSword{
-    background-image: url(/sprites/swords-sprites.png);
+    background-image: url(../sprites/swords-sprites.png);
     background-position: 0px -330px;
 }
 .marsil{
-    background-image: url(/sprites/swords-sprites.png);
+    background-image: url(../sprites/swords-sprites.png);
     background-position: 0px 350px;
 }
 .masamune{
-    background-image: url(/sprites/swords-sprites.png);
+    background-image: url(../sprites/swords-sprites.png);
     background-position: 0px -440px;
 }
 .mourneblade{
-    background-image: url(/sprites/swords-sprites.png);
+    background-image: url(../sprites/swords-sprites.png);
     background-position: 0px 0px;
 }
 .muramasa{
-    background-image: url(/sprites/swords-sprites.png);
+    background-image: url(../sprites/swords-sprites.png);
     background-position: 0px -110px;
 }
 .osafune{
-    background-image: url(/sprites/swords-sprites.png);
+    background-image: url(../sprites/swords-sprites.png);
     background-position: 0px 110px;
 }
 .runeSword{
-    background-image: url(/sprites/swords-sprites.png);
+    background-image: url(../sprites/swords-sprites.png);
     background-position: 0px -560px;
 }
 .yasutsuna{
-    background-image: url(/sprites/swords-sprites.png);
+    background-image: url(../sprites/swords-sprites.png);
     background-position: 0px 460px;
 }
 
@@ -189,10 +221,16 @@ div[class^="tabla"] {
 @media only screen and (max-width: 600px){
     
     body{
-        background-image: url(/pics/fondo.jpg);
+        background-image: url(../pics/fondo.jpg);
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
+    }
+    .nav{
+        display: none;
+    }
+    .video{
+        width: 100%;
     }
     .imgchiquita-movil{
         width: 60% !important;
@@ -216,7 +254,7 @@ div[class^="tabla"] {
 }
 @media only screen and (min-width: 600px){
     body{
-        background-image: url(/pics/fondo-tablet.jpg);
+        background-image: url(../pics/fondo-tablet.jpg);
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
@@ -244,7 +282,6 @@ div[class^="tabla"] {
         border: 2px solid darkblue;
         border-radius: 2%;
         background-color: rgba(140, 140, 140, 0.4);
-        float: right;
     }
 
     .imgchiquita-tablet{
@@ -270,7 +307,7 @@ div[class^="tabla"] {
 }
 @media only screen and (min-width: 1200px){
     body{
-        background-image: url(/pics/fondo-pc.jpg);
+        background-image: url(../pics/fondo-pc.jpg);
         background-attachment: fixed;
         background-position: -2px 0px;
         background-size: cover;
@@ -288,12 +325,16 @@ div[class^="tabla"] {
 
     }
 
+    .bestia{
+        border: 1px solid grey;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
     .personajes p{
         padding: 0 20px;
     }
 
-    .bestia p{
-        padding: 20px;
-    }
+
 
 }

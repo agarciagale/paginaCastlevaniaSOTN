@@ -6,26 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/reset_base.css">
     <link rel="stylesheet" href="estilos/estilos.css">
+    <script src="js/castlevania.js"></script>
     <script src="https://kit.fontawesome.com/a1e6115532.js" crossorigin="anonymous"></script>
     <title>Castlevania SOTN</title>
 </head>
 <body>
     <header>
         <div class="l-fila header">
-            <i class="fa-solid fa-bars"></i>
+
+            <i class="fa-solid fa-bars" id="hamburger-menu">
+                <nav></nav>
+            </i>
             <img src="pics/logo.png" alt="" class="logo logo--tablet">
         </div>
     </header>
+    <div class="nav">
+        <a href="#historia">Historia</a>
+        <a href="#personajes">Personajes</a>
+        <a href="#arsenal">Arsenal</a>
+        <a href="#bestiario">Bestiario</a>
+    </div>
     <main>
         <!-- div Introduccion -->
-        <div class="movil l-fila intro">
+        <div class="seccion l-fila intro">
             <p>Castlevania: Symphony of the Night, es un videojuego de acción-aventura de gráficos 2D desarrollado y publicado por Konami en el año 1997. Es la treceava entrega de la saga Castlevania, siendo esta la primera publicada para PlayStation y Sega Saturn.</p>
             <img src="pics/Castlevania_sotn_pal.png" alt="" width="100%">
             <p>El juego obtuvo elogios generalizados, a menudo citado por los críticos como uno de los mejores videojuegos de todos los tiempos, elogiando sus innovaciones en el juego, la atmósfera, las imágenes y la banda sonora. También se considera un pionero del género Metroidvania, inspirando numerosos juegos de acción y aventuras basados en la exploración.</p>
             <p>El desarrollo de todas sus características se atribuye a Koji Igarashi, el director del videojuego y uno de los miembros más jóvenes del equipo (para aquel entonces). Igarashi, un gran fan de los videojuegos 2D, se instrumentó mucho en refinar el planteamiento de control del videojuego. Otros miembros notables del equipo fueron la diseñadora Ayami Kojima y la compositora Michiru Yamane.</p>
+            <video class="video" src="video/trailer.mp4" controls autoplay loop></video>
         </div>
         <!-- div Historia -->
-        <div class="movil l-fila historia">
+        <div class="seccion l-fila historia" id="historia">
             <h1>Historia</h1>
             <hr>
             <p>Una guerra sin fin, o eso parece... Con el misterioso surgimiento de un ser sobrenatural, el clan Belmont, una familia guerrera y poderosa, decide oponerse, iniciándose una guerra sin fin. Con la humanidad condenada al tormento costante del señor oscuro, los Belmont serán los encargados de evitar que la cólera de éste, el alma de dragón y demonio, <b>DRÁCULA</b>, no caiga sobre el mundo.</p>
@@ -41,7 +52,7 @@
             <p>A partir de esta sección, se profundizará en el argumento, detallando muchos aspectos y caracteristicas del juego. ¡Si lo que quieres es no saber nada, no sigas leyendo! :O</p>
         </div>
         <!-- div Personajes -->
-        <div class="movil l-fila personajes">
+        <div class="seccion l-fila personajes" id="personajes">
 
             <h1>Personajes</h1>
             <hr>
@@ -202,63 +213,65 @@
             </section>
         </div>
         <!-- div Arsenal -->
-        <div class="movil l-fila arsenal">
+        <div class="seccion l-fila arsenal" id="arsenal">
             <h1>Arsenal</h1>
             <hr>
-            <table class="tabla-arsenal">
-                <tr>
-                    <td><i>Crissaegrim</i></td>
-                    <td class="descArma">Es vagamente similar al Yasutsuna, pero dispara ondas de vacío en lugar de cuchillas circulares. </td>
-                    <td><div class="arma crissaegrim"></div></td>
-                </tr>
-                <tr>
-                    <td><i>Heaven Sword</i></td>
-                    <td class="descArma">Se lanza hacia adelante y luego vuelve hacia ti, como un boomerang</td>
-                    <td><div class="arma heavenSword"></div></td>
-                </tr>
-                <tr>
-                    <td><i>Jewel Sword</i></td>
-                    <td class="descArma">Deja joyas como elementos al matar monstruos</td>
-                    <td><div class="arma jewelSword"></div></td>
-                </tr>
-                <tr>
-                    <td><i>Marsil</i></td>
-                    <td class="descArma">Espada llameante que puede golpear hasta cuatro veces con su fuego.</td>
-                    <td><div class="arma marsil"></div></td>
-                </tr>
-                <tr>
-                    <td><i>Masamune</i></td>
-                    <td class="descArma">Muy similar al Muramasa, excepto que no tiene la capacidad de chupar sangre fría.</td>
-                    <td><div class="arma masamune"></div></td>
-                </tr>
-                <tr>
-                    <td><i>Mourneblade</i></td>
-                    <td class="descArma">Soul Steal: cada vez que atacas a un enemigo, ganarás un pequeño porcentaje de vida.</td>
-                    <td><div class="arma mourneblade"></div></td>
-                </tr>
-                <tr>
-                    <td><i>Muramasa</i></td>
-                    <td class="descArma">Espada sedienta de sangre. Cuando está equipada, tendrás el hechizo Dark Metamorphosis</td>
-                    <td><div class="arma muramasa"></div></td>
-                </tr>
-                <tr>
-                    <td><i>Osafune</i></td>
-                    <td class="descArma">Un arma de dos manos, bastante fuerte. Contiene un movimiento de bola de fuego</td>
-                    <td><div class="arma osafune"></div></td>
-                </tr>
-                <tr>
-                    <td><i>Rune Sword</i></td>
-                    <td class="descArma">Con un ataque normal, sale de las manos de Alucard, vuela en un arco y regresa muy rápido.</td>
-                    <td><div class="arma runeSword"></div></td>
-                </tr>
-                <tr>
-                    <td><i>Yasutsuna</i></td>
-                    <td class="descArma">Muy rápida y poderosa, atacará con un círculo de cuchillas fulminantes frente a Alucard.</td>
-                    <td><div class="arma yasutsuna"></div></td>
-                </tr>
-            </table>
+            <div class="div-tabla-arsenal">
+                <table class="tabla-arsenal">
+                    <tr>
+                        <td><i>Crissaegrim</i></td>
+                        <td class="descArma">Es vagamente similar al Yasutsuna, pero dispara ondas de vacío en lugar de cuchillas circulares. </td>
+                        <td><div class="arma crissaegrim"></div></td>
+                    </tr>
+                    <tr>
+                        <td><i>Heaven Sword</i></td>
+                        <td class="descArma">Se lanza hacia adelante y luego vuelve hacia ti, como un boomerang</td>
+                        <td><div class="arma heavenSword"></div></td>
+                    </tr>
+                    <tr>
+                        <td><i>Jewel Sword</i></td>
+                        <td class="descArma">Deja joyas como elementos al matar monstruos</td>
+                        <td><div class="arma jewelSword"></div></td>
+                    </tr>
+                    <tr>
+                        <td><i>Marsil</i></td>
+                        <td class="descArma">Espada llameante que puede golpear hasta cuatro veces con su fuego.</td>
+                        <td><div class="arma marsil"></div></td>
+                    </tr>
+                    <tr>
+                        <td><i>Masamune</i></td>
+                        <td class="descArma">Muy similar al Muramasa, excepto que no tiene la capacidad de chupar sangre fría.</td>
+                        <td><div class="arma masamune"></div></td>
+                    </tr>
+                    <tr>
+                        <td><i>Mourneblade</i></td>
+                        <td class="descArma">Soul Steal: cada vez que atacas a un enemigo, ganarás un pequeño porcentaje de vida.</td>
+                        <td><div class="arma mourneblade"></div></td>
+                    </tr>
+                    <tr>
+                        <td><i>Muramasa</i></td>
+                        <td class="descArma">Espada sedienta de sangre. Cuando está equipada, tendrás el hechizo Dark Metamorphosis</td>
+                        <td><div class="arma muramasa"></div></td>
+                    </tr>
+                    <tr>
+                        <td><i>Osafune</i></td>
+                        <td class="descArma">Un arma de dos manos, bastante fuerte. Contiene un movimiento de bola de fuego</td>
+                        <td><div class="arma osafune"></div></td>
+                    </tr>
+                    <tr>
+                        <td><i>Rune Sword</i></td>
+                        <td class="descArma">Con un ataque normal, sale de las manos de Alucard, vuela en un arco y regresa muy rápido.</td>
+                        <td><div class="arma runeSword"></div></td>
+                    </tr>
+                    <tr>
+                        <td><i>Yasutsuna</i></td>
+                        <td class="descArma">Muy rápida y poderosa, atacará con un círculo de cuchillas fulminantes frente a Alucard.</td>
+                        <td><div class="arma yasutsuna"></div></td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <div class="movil l-fila bestiario">
+        <div class="seccion l-fila bestiario" id="bestiario">
             <h1>Bestiario</h1>
             <hr>
             <section>
