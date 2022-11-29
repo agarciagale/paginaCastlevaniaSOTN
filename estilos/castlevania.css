@@ -43,26 +43,37 @@ div[class^="tabla"] {
 ul{
     margin: 10px;
 }
-
+.fa-arrow-up{
+    position: fixed;
+    right: 10px;
+    bottom: 60px;
+    font-size: 40px;
+    color: darkgrey;
+    cursor: pointer;
+}
+.fa-arrow-up:hover{
+    color: white;
+}
 .nav{
     margin: 10px auto;
     width: 100%;
     text-align: center;
     background-color: black;
-    color: white;
-    padding: 20px;
     position: sticky;
     top: 0;
 }
 
-.nav a{
-    margin: 20px;
+.nav input{
+    margin: 16px;
     text-decoration: none;
+    font-size: 16px;
     color: white;
+    background: none;
     font-family: var(--cinzel);
+    cursor: pointer;
 }
 
-.nav a:hover{
+.nav input:hover{
     color: silver;
 }
 
@@ -229,6 +240,20 @@ ul{
     .nav{
         display: none;
     }
+    .active{
+        display: block;
+        padding: 1px;
+        position: static;
+    }
+    .nav input{
+        display: block;
+        margin: 10px auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid silver;
+        border-bottom: 1px solid silver;
+        width: 100%;
+    }
     .video{
         width: 100%;
     }
@@ -239,16 +264,20 @@ ul{
         float: left;
         margin-top: 10px;
         width: 80%;
-        left: 20%;
-        
+        left: 20%;   
     }
-    .fa-solid {
-        float: left;
-        padding: 11% 0;
+    
+    .fa-bars{
+        float: left;        
+        margin: 11% 0;
         width: 15%;
         color: darkgrey;
         text-align: center;
         font-size: 50px;
+        cursor: pointer;
+    }
+    .fa-bars:hover{
+        color: white;
     }
 
 }
@@ -312,7 +341,7 @@ ul{
         background-position: -2px 0px;
         background-size: cover;
         background-repeat: repeat;
-    }
+    }  
 
     div[class^="tabla"] {
         padding: 20px;
@@ -322,7 +351,13 @@ ul{
         border-radius: 2%;
         background-color: rgba(140, 140, 140, 0.4);
         float: none;
+    }
 
+    .parrafoImagen{
+        margin-top: 50px;
+        border-top: 1px groove silver;
+        border-bottom: 1px groove silver;
+        padding: 5px;
     }
 
     .bestia{

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/reset_base.css">
     <link rel="stylesheet" href="estilos/estilos.css">
-    <script src="js/castlevania.js"></script>
     <script src="https://kit.fontawesome.com/a1e6115532.js" crossorigin="anonymous"></script>
     <title>Castlevania SOTN</title>
 </head>
@@ -14,26 +13,29 @@
     <header>
         <div class="l-fila header">
 
-            <i class="fa-solid fa-bars" id="hamburger-menu">
-                <nav></nav>
+            <i class="fa-solid fa-bars" id="hamburger-menu" onclick="menuResponsive()">
             </i>
+            
             <img src="pics/logo.png" alt="" class="logo logo--tablet">
         </div>
     </header>
-    <div class="nav">
-        <a href="#historia">Historia</a>
-        <a href="#personajes">Personajes</a>
-        <a href="#arsenal">Arsenal</a>
-        <a href="#bestiario">Bestiario</a>
+    <div class="nav" id="nav">
+        <input type="button" value="Historia" onclick="scrollASeccion('historia')">
+        <input type="button" value="Personajes" onclick="scrollASeccion('personajes')">
+        <input type="button" value="Arsenal" onclick="scrollASeccion('arsenal')">
+        <input type="button" value="Bestiario" onclick="scrollASeccion('bestiario')">
     </div>
     <main>
+        <!--Flecha para subir arriba-->
+        <i class="fa-solid fa-arrow-up" onclick="subirArriba()"></i>
+
         <!-- div Introduccion -->
         <div class="seccion l-fila intro">
             <p>Castlevania: Symphony of the Night, es un videojuego de acción-aventura de gráficos 2D desarrollado y publicado por Konami en el año 1997. Es la treceava entrega de la saga Castlevania, siendo esta la primera publicada para PlayStation y Sega Saturn.</p>
             <img src="pics/Castlevania_sotn_pal.png" alt="" width="100%">
-            <p>El juego obtuvo elogios generalizados, a menudo citado por los críticos como uno de los mejores videojuegos de todos los tiempos, elogiando sus innovaciones en el juego, la atmósfera, las imágenes y la banda sonora. También se considera un pionero del género Metroidvania, inspirando numerosos juegos de acción y aventuras basados en la exploración.</p>
-            <p>El desarrollo de todas sus características se atribuye a Koji Igarashi, el director del videojuego y uno de los miembros más jóvenes del equipo (para aquel entonces). Igarashi, un gran fan de los videojuegos 2D, se instrumentó mucho en refinar el planteamiento de control del videojuego. Otros miembros notables del equipo fueron la diseñadora Ayami Kojima y la compositora Michiru Yamane.</p>
-            <video class="video" src="video/trailer.mp4" controls autoplay loop></video>
+            <p class="parrafoImagen">El juego obtuvo elogios generalizados, a menudo citado por los críticos como uno de los mejores videojuegos de todos los tiempos, elogiando sus innovaciones en el juego, la atmósfera, las imágenes y la banda sonora. También se considera un pionero del género Metroidvania, inspirando numerosos juegos de acción y aventuras basados en la exploración.</p>
+            <p class="parrafoImagen">El desarrollo de todas sus características se atribuye a Koji Igarashi, el director del videojuego y uno de los miembros más jóvenes del equipo (para aquel entonces). Igarashi, un gran fan de los videojuegos 2D, se instrumentó mucho en refinar el planteamiento de control del videojuego. Otros miembros notables del equipo fueron la diseñadora Ayami Kojima y la compositora Michiru Yamane.</p>
+            <video class="video" src="video/trailer.mp4" controls autoplay loop muted></video>
         </div>
         <!-- div Historia -->
         <div class="seccion l-fila historia" id="historia">
@@ -43,8 +45,8 @@
             <p>Con los diferentes intentos, se descubre que, al acabar con Drácula, este vuelve a ser revivido después de unos 100 años junto a su castillo.</p>
             <p>En 1797, uno de los descentientes de los Belmont, Richter Belmont, se encuentra en el castillo, a punto de acabar con el Conde Drácula. Lo consigue, pero de repente Richter desaparece. </p>
             <img src="pics/richter-vs-dracula.jpg" alt="" width="100%">
-            <p>El castillo apareció de nuevo, pero 5 años después, y no había Belmonts que pudieran intervenir. Con el mundo entre las cuerdas, un misterioso hombre, llamado <b>ALUCARD</b>, despierta de lo que parece ser un sueño auto-inducido. Con un objetivo claro, decide investigar que es lo que pasa en el castillo. Maria Renard, amiga del desaparecido Richter, también se aventura dentro para intentar salvar a su amigo.</p>
-            <p>¿Qué está pasando? ¿Acaso es el fin de la humanidad? ¿Quién es Alucard? Sumérgete en las mazmorras del gran señor oscuro y descubre que esta ocurriendo...</p>
+            <p class="parrafoImagen">El castillo apareció de nuevo, pero 5 años después, y no había Belmonts que pudieran intervenir. Con el mundo entre las cuerdas, un misterioso hombre, llamado <b>ALUCARD</b>, despierta de lo que parece ser un sueño auto-inducido. Con un objetivo claro, decide investigar que es lo que pasa en el castillo. Maria Renard, amiga del desaparecido Richter, también se aventura dentro para intentar salvar a su amigo.</p>
+            <p class="parrafoImagen">¿Qué está pasando? ¿Acaso es el fin de la humanidad? ¿Quién es Alucard? Sumérgete en las mazmorras del gran señor oscuro y descubre que esta ocurriendo...</p>
         </div>
         <!-- div Spoiler -->
         <div class="l-fila spoiler">
@@ -417,12 +419,16 @@
                     <span>Página creada por: <br>Adrián García</span>
                 </div>
                 <div class="l-col-4">
-                    <a href="">Fuentes y agradecimientos</a>
+                    <a href="" onclick="bibliografia()">Fuentes y agradecimientos</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!--CODIGO JAVASCRIPT-->
     
+    <script src="js/castlevania.js"></script>
+
+    <!--CODIGO JAVASCRIPT-->
 </body>
 </html>
