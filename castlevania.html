@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,10 +20,10 @@
         </div>
     </header>
     <div class="nav" id="nav">
-        <input type="button" value="Historia" onclick="scrollASeccion('historia')">
-        <input type="button" value="Personajes" onclick="scrollASeccion('personajes')">
-        <input type="button" value="Arsenal" onclick="scrollASeccion('arsenal')">
-        <input type="button" value="Bestiario" onclick="scrollASeccion('bestiario')">
+        <input type="button" value="Historia" accesskey="1" onclick="scrollASeccion('historia')">
+        <input type="button" value="Personajes" accesskey="2" onclick="scrollASeccion('personajes')">
+        <input type="button" value="Arsenal" accesskey="3" onclick="scrollASeccion('arsenal')">
+        <input type="button" value="Bestiario" accesskey="4" onclick="scrollASeccion('bestiario')">
     </div>
     <main>
         <!--Flecha para subir arriba-->
@@ -219,7 +219,9 @@
             <h1>Arsenal</h1>
             <hr>
             <div class="div-tabla-arsenal">
-                <table class="tabla-arsenal">
+                <table class="tabla-arsenal" summary="Tabla donde aparecen todas las espadas del juego, con su nombre, descripcion e imagen">
+                    <caption>Espadas</caption>
+                    <tbody>
                     <tr>
                         <td><i>Crissaegrim</i></td>
                         <td class="descArma">Es vagamente similar al Yasutsuna, pero dispara ondas de vacío en lugar de cuchillas circulares. </td>
@@ -270,6 +272,7 @@
                         <td class="descArma">Muy rápida y poderosa, atacará con un círculo de cuchillas fulminantes frente a Alucard.</td>
                         <td><div class="arma yasutsuna"></div></td>
                     </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -404,6 +407,11 @@
                     <p>En la literatura y la mitología griega antigua se encuentran algunas referencias a hombres que se convierten en lobos. Los Neuri eran una tribu que se transformaba en lobos una vez al año durante varios días y luego volvía a su forma humana. Lycaon se transformó en lobo porque había asesinado ritualmente a un niño. Virgilio en un momento también escribió sobre seres humanos transformándose en lobos.</p>
                     <div class="quitar-float"></div>
                 </div>
+        </div>
+        <div class="formulario">
+            <form action="">
+
+            </form>
         </div>
     </main>
     <footer>

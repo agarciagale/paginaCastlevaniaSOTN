@@ -53,6 +53,7 @@ ul{
 }
 .fa-arrow-up:hover{
     color: white;
+    transition: 0.3s;
 }
 .nav{
     margin: 10px auto;
@@ -75,6 +76,7 @@ ul{
 
 .nav input:hover{
     color: silver;
+    transition: 0.3s;
 }
 
 .video{
@@ -139,6 +141,11 @@ ul{
 
 .tabla-arsenal{
     margin: 0 auto;
+}
+
+.tabla-arsenal caption{
+    font-size: 20px;
+    margin: 10px auto;
 }
 
 .tabla-arsenal td{
@@ -278,6 +285,7 @@ ul{
     }
     .fa-bars:hover{
         color: white;
+        transition: 0.3s;
     }
 
 }
