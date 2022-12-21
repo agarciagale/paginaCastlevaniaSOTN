@@ -20,7 +20,7 @@
 p{
     font-family: var(--spectral);
     color: silver;
-    font-size: 16px;
+    font-size: 1rem;
     margin: 10px 0;
 }
 h1, h2{
@@ -43,6 +43,13 @@ div[class^="tabla"] {
 ul{
     margin: 10px;
 }
+.oculto{
+    position: absolute;
+    opacity: 0;
+}
+.lista-accesibilidad{
+    margin: 0 40px;
+}
 .fa-arrow-up{
     position: fixed;
     right: 10px;
@@ -50,6 +57,7 @@ ul{
     font-size: 40px;
     color: darkgrey;
     cursor: pointer;
+    transition: 0.3s;
 }
 .fa-arrow-up:hover{
     color: white;
@@ -67,16 +75,29 @@ ul{
 .nav input{
     margin: 16px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     color: white;
     background: none;
     font-family: var(--cinzel);
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .nav input:hover{
     color: silver;
     transition: 0.3s;
+}
+
+.intro table{
+    margin: 5px auto;
+    padding: 5px;
+}
+.intro table caption{
+    font-size: 1.25rem;
+}
+.intro td, th{
+    border: 1px solid silver;
+    padding: 10px 20px;
 }
 
 .video{
@@ -144,7 +165,7 @@ ul{
 }
 
 .tabla-arsenal caption{
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 10px auto;
 }
 
@@ -210,6 +231,73 @@ ul{
     background-position: 0px 460px;
 }
 
+.mas-informacion{
+    color: silver;
+}
+.mas-informacion:hover, .mas-informacion:focus, .mas-informacion:active{
+    position: relative;
+}
+.mas-informacion:hover span, .mas-informacion:focus span, .mas-informacion:active span{
+    left: 0px;
+    top: 40px;
+    width: 100%;
+    border: 1px solid crimson;
+    padding: 5px;
+}
+.mas-informacion:hover span::before, .mas-informacion:focus span::before, .mas-informacion:active span::before{
+    content: "Mas información ";
+}
+.mas-informacion span{
+    position: absolute;
+    left: -9999em;
+    width: 1px;
+    overflow: hidden;
+}
+/* .active-span{
+    display: block !important;
+    color: yellow;
+} */
+
+/* Estilo formulario */
+
+.formulario fieldset{
+    padding: 10px;
+}
+.formulario label{
+    width: 170px;
+    float: left;
+}
+#nombre, #apellidos, #pass{
+    width: 180px;
+}
+#email{
+    width: 250px;
+}
+#fecha{
+    width: 100px;
+}
+#observaciones{
+    width: 100%;
+    margin: 40px auto;
+}
+#btn-submit{
+    display: block;
+    border-color: silver;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.125em;
+    background-color: black;
+    color: crimson;
+    font-family: var(--spectral);
+    margin: 0 auto;
+    transition: 0.3s;
+}
+#btn-submit:hover{
+    cursor: pointer;
+    border-color: crimson;
+    transition: 0.3s;
+}
+
 /* Estilo Footer*/
 
 .footer{
@@ -233,6 +321,11 @@ ul{
     display: inline-block;
     width: 20%;
     max-width: 40px;
+}
+.img-accesibilidad{
+    display: block;
+    width: 30%;
+    margin: 5px auto;
 }
 
 
@@ -282,6 +375,7 @@ ul{
         text-align: center;
         font-size: 50px;
         cursor: pointer;
+        transition: 0.3s;
     }
     .fa-bars:hover{
         color: white;
@@ -299,7 +393,6 @@ ul{
     .imgchiquita-movil{
         width: 40% !important;
     }
-
     .intro img{
         float: left;
         margin-right: 10px;

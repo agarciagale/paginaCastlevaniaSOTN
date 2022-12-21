@@ -10,46 +10,94 @@
     <title>Castlevania SOTN</title>
 </head>
 <body>
-    <header>
+    <header role="banner">
         <div class="l-fila header">
+            <a href="#historia" accesskey="1" class="oculto">Saltar a contenido principal</a>
 
-            <i class="fa-solid fa-bars" id="hamburger-menu" onclick="menuResponsive()">
+            <i class="fa-solid fa-bars" id="hamburger-menu" aria-hidden="true">
             </i>
             
-            <img src="pics/logo.png" alt="" class="logo logo--tablet">
+            <a href="castlevania.html"><img src="pics/logo.png" alt="Ir a la página principal" class="logo logo--tablet"></a>
+            
         </div>
     </header>
-    <div class="nav" id="nav">
-        <input type="button" value="Historia" accesskey="1" onclick="scrollASeccion('historia')">
-        <input type="button" value="Personajes" accesskey="2" onclick="scrollASeccion('personajes')">
-        <input type="button" value="Arsenal" accesskey="3" onclick="scrollASeccion('arsenal')">
-        <input type="button" value="Bestiario" accesskey="4" onclick="scrollASeccion('bestiario')">
+    <div class="nav" id="nav" role="navigation">
+        <input type="button" value="Historia" id="boton-historia" accesskey="2" tabindex="-1">
+        <input type="button" value="Personajes" id="boton-personajes" accesskey="3" tabindex="-1">
+        <input type="button" value="Arsenal" id="boton-arsenal" accesskey="4" tabindex="-1">
+        <input type="button" value="Bestiario" id="boton-bestiario" accesskey="5" tabindex="-1">
     </div>
-    <main>
+    <main role="main">
         <!--Flecha para subir arriba-->
-        <i class="fa-solid fa-arrow-up" onclick="subirArriba()"></i>
+        <i class="fa-solid fa-arrow-up" id="flecha-arriba" aria-hidden="true"></i>
 
         <!-- div Introduccion -->
-        <div class="seccion l-fila intro">
+        <div class="seccion l-fila intro" tabindex="0" aria-label="Introducción">
             <p>Castlevania: Symphony of the Night, es un videojuego de acción-aventura de gráficos 2D desarrollado y publicado por Konami en el año 1997. Es la treceava entrega de la saga Castlevania, siendo esta la primera publicada para PlayStation y Sega Saturn.</p>
-            <img src="pics/Castlevania_sotn_pal.png" alt="" width="100%">
+            <img src="pics/Castlevania_sotn_pal.png" alt="Portada del juego para PlayStation, en la versión Europea" width="100%">
             <p class="parrafoImagen">El juego obtuvo elogios generalizados, a menudo citado por los críticos como uno de los mejores videojuegos de todos los tiempos, elogiando sus innovaciones en el juego, la atmósfera, las imágenes y la banda sonora. También se considera un pionero del género Metroidvania, inspirando numerosos juegos de acción y aventuras basados en la exploración.</p>
             <p class="parrafoImagen">El desarrollo de todas sus características se atribuye a Koji Igarashi, el director del videojuego y uno de los miembros más jóvenes del equipo (para aquel entonces). Igarashi, un gran fan de los videojuegos 2D, se instrumentó mucho en refinar el planteamiento de control del videojuego. Otros miembros notables del equipo fueron la diseñadora Ayami Kojima y la compositora Michiru Yamane.</p>
             <video class="video" src="video/trailer.mp4" controls autoplay loop muted></video>
+            <hr>
+            <table summary="Fechas de publicación del juego en los distintos países, y las consolas en las que se integró. Tabla de 6 filas y 4 columnas">
+                <caption>Fechas de publicación</caption>
+                <thead>
+                    <tr>
+                        <th>Consolas/Región</th>
+                        <th id="Japón">Japón</th>
+                        <th id="Europa">Europa</th>
+                        <th id="EEUU">EE.UU</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th scope=row >Distribuido por:</th>
+                        <td colspan=3 ><i>Konami</i></td>
+                    </tr>
+                </tfoot>
+                
+        
+        <tbody>
+                    <tr>
+                        <th id="PlayStation" abbr="Consola PlayStation">PlayStation</th>
+                        <td headers="Japon PlayStation">20/03/1997</td>
+                        <td headers="Europa PlayStation">01/11/1997</td>
+                        <td headers="EEUU PlayStation">02/10/1997</td>
+                    </tr>
+                    <tr>
+                        <th id="Sega Saturn" abbr="Consola Sega Saturn">Sega Saturn</th>
+                        <td headers="Japon Sega Saturn">25/06/1998</td>
+                        <td headers="Europa Sega Saturn">No publicado</td>
+                        <td headers="EEUU Sega Saturn">No publicado</td>
+                    </tr>
+                    <tr>
+                        <th id="Xbox Live Arcade" abbr="Servicio de Xbox Live Arcade (Consolas Xbox)">Xbox Live Arcade</th>
+                        <td headers="Japon Xbox">25/07/2007</td>
+                        <td headers="Europa Xbox">21/03/2007</td>
+                        <td headers="EEUU Xbox">21/03/2007</td>
+                    </tr>
+                    <tr>
+                        <th id="PlayStation Portable" abbr="Consola PlayStation Portable">PlayStation Portable</th>
+                        <td headers="Japon PlayStation Portable">08/11/2007</td>
+                        <td headers="Europa PlayStation Portable">15/02/2008</td>
+                        <td headers="EEUU PlayStation Portable">23/10/2007</td>
+                </tbody>
+            </table>
+        
         </div>
         <!-- div Historia -->
-        <div class="seccion l-fila historia" id="historia">
+        <div class="seccion l-fila historia" id="historia" role="main" tabindex="0">
             <h1>Historia</h1>
             <hr>
             <p>Una guerra sin fin, o eso parece... Con el misterioso surgimiento de un ser sobrenatural, el clan Belmont, una familia guerrera y poderosa, decide oponerse, iniciándose una guerra sin fin. Con la humanidad condenada al tormento costante del señor oscuro, los Belmont serán los encargados de evitar que la cólera de éste, el alma de dragón y demonio, <b>DRÁCULA</b>, no caiga sobre el mundo.</p>
             <p>Con los diferentes intentos, se descubre que, al acabar con Drácula, este vuelve a ser revivido después de unos 100 años junto a su castillo.</p>
             <p>En 1797, uno de los descentientes de los Belmont, Richter Belmont, se encuentra en el castillo, a punto de acabar con el Conde Drácula. Lo consigue, pero de repente Richter desaparece. </p>
-            <img src="pics/richter-vs-dracula.jpg" alt="" width="100%">
+            <img src="pics/richter-vs-dracula.jpg" alt="Ilustración del enfrentamiento de Richter contra Drácula" width="100%">
             <p class="parrafoImagen">El castillo apareció de nuevo, pero 5 años después, y no había Belmonts que pudieran intervenir. Con el mundo entre las cuerdas, un misterioso hombre, llamado <b>ALUCARD</b>, despierta de lo que parece ser un sueño auto-inducido. Con un objetivo claro, decide investigar que es lo que pasa en el castillo. Maria Renard, amiga del desaparecido Richter, también se aventura dentro para intentar salvar a su amigo.</p>
             <p class="parrafoImagen">¿Qué está pasando? ¿Acaso es el fin de la humanidad? ¿Quién es Alucard? Sumérgete en las mazmorras del gran señor oscuro y descubre que esta ocurriendo...</p>
         </div>
         <!-- div Spoiler -->
-        <div class="l-fila spoiler">
+        <div class="l-fila spoiler" tabindex="0">
             <h1>ATENCIÓN</h1>
             <p>A partir de esta sección, se profundizará en el argumento, detallando muchos aspectos y caracteristicas del juego. ¡Si lo que quieres es no saber nada, no sigas leyendo! :O</p>
         </div>
@@ -58,13 +106,13 @@
 
             <h1>Personajes</h1>
             <hr>
-            <section>
-                <div class="l-col-6--pc">
+            <section role="region">
+                <div class="l-col-6--pc" tabindex="0">
                     <h2>Alucard</h2>
                     <p>Es el personaje principal, el cual despertó de su sueño eterno auto-inducido aparentemente a debido a los sucesos relacionados con la reaparición del castillo de Drácula. Se pone en marcha el mismo para averiguar la posible causa de su repentino despertar y saber que acontece en el castillo.</p>
                     <div class="tabla-alucard">
-                        <img src="pics/Alucard.png" alt="" width="100%" class="centrarimg">
-                        <ul>
+                        <img src="pics/Alucard.png" alt="Ilustración de Alucard" width="100%" class="centrarimg">
+                        <ul role="tree">
                             <li>Ocupación: <b>Principe de los Vampiros</b></li>
                             <li>Raza: <b>Dhampir (Hijo de vampiro y humano)</b></li>
                             <li>Arma principal: <b>Espada de Alucard</b></li>
@@ -74,13 +122,13 @@
                     <div class="quitar-float"></div>
                 </div>
             </section>
-            <section>
-                <div class="l-col-6--pc">
+            <section role="region">
+                <div class="l-col-6--pc" tabindex="0">
                     <h2>Richter Belmont</h2>
                     <p>Héroe descendiente directo del clan Belmont quien derrotó a Drácula hace cinco años, pero que desapareció de forma repentina hace un año.</p>
                     <div class="tabla-richter">
-                        <img src="pics/Richter.png" alt="" width="100%" class="centrarimg">
-                        <ul>
+                        <img src="pics/Richter.png" alt="Ilustración de Richter" width="100%" class="centrarimg">
+                        <ul role="tree">
                             <li>Ocupación: <b>Cazavampiros</b></li>
                             <li>Raza: <b>Humano</b></li>
                             <li>Arma principal: <b>Vampire Killer</b></li>
@@ -90,13 +138,13 @@
                     <div class="quitar-float"></div>
                 </div>
             </section>
-            <section>
-                <div class="l-col-6--pc quitar-float">
+            <section role="region">
+                <div class="l-col-6--pc quitar-float" tabindex="0">
                     <h2>Maria Renard</h2>
                     <p>Ayudó a Richter a derrotar a Drácula hace cinco años. Después de que éste desapareciera, decidió emprender la búsqueda de su amigo extraviado.</p>
                     <div class="tabla-maria">
-                        <img src="pics/MariaRenard.png" alt="" width="100%" class="centrarimg">
-                        <ul>
+                        <img src="pics/MariaRenard.png" alt="Ilustración de Maria Renard" width="100%" class="centrarimg">
+                        <ul role="tree">
                             <li>Ocupación: <b>Cazavampiros</b></li>
                             <li>Raza: <b>Humana</b></li>
                             <li>Arma principal: <b>Armas y espiritus animales</b></li>
@@ -106,13 +154,13 @@
                     <div class="quitar-float"></div>
                 </div>
             </section>
-            <section>
-                <div class="l-col-6--pc">
+            <section role="region">
+                <div class="l-col-6--pc" tabindex="0">
                     <h2>Maestro Bibliotecario</h2>
                     <p>El maestro bibliotecario encargado de la gran biblioteca del castillo, donde el Conde Drácula mantiene su vasta colección de piezas de literatura encantadas y prohibidas. Parece serle leal a Drácula, aunque ayudara a Alucard por un precio adecuado.</p>
                     <div class="tabla-maestro">
-                        <img src="pics/Librarian.png" alt="" width="100%" class="centrarimg">
-                        <ul>
+                        <img src="pics/Librarian.png" alt="Ilustración de el maestro bibliotecario" width="100%" class="centrarimg">
+                        <ul role="tree">
                             <li>Ocupación: <b>Bibliotecario y comerciante</b></li>
                             <li>Raza: <b>Humano</b></li>
                         </ul>
@@ -120,13 +168,13 @@
                     <div class="quitar-float"></div>
                 </div>
             </section>
-            <section>
-                <div class="l-col-6--pc quitar-float">
+            <section role="region">
+                <div class="l-col-6--pc quitar-float" tabindex="0">
                     <h2>Barquero</h2>
                     <p>Su papel en el videojuego es muy simple: esperar al protagonista para transportarlo a través de un río (cuando nadar no es una opción). A veces, para invocarlo se necesitan artículos específicos (como en este videojuego por ejemplo).</p>
                     <div class="tabla-barquero">
-                        <img src="pics/Ferryman.png" alt="" width="100%" class="centrarimg">
-                        <ul>
+                        <img src="pics/Ferryman.png" alt="Ilustración de el barquero" width="100%" class="centrarimg">
+                        <ul role="tree">
                             <li>Ocupación: <b>Barquero</b></li>
                             <li>Raza: <b>Desconocido</b></li>
                         </ul>
@@ -134,13 +182,13 @@
                     <div class="quitar-float"></div>
                 </div>
             </section>
-            <section>
-                <div class="l-col-6--pc">
+            <section role="region">
+                <div class="l-col-6--pc" tabindex="0">
                     <h2>Lisa</h2>
                     <p>La madre de Alucard. Fue quemada en la hoguera después de ser victima de falsas acusaciones de brujería, lo que causo la furia de Drácula hace muchos años. Ella habría amado a Drácula por toda eternidad.</p>
                     <div class="tabla-lisa">
-                        <img src="pics/Lisa.png" alt="" width="100%" class="centrarimg">
-                        <ul>
+                        <img src="pics/Lisa.png" alt="Ilustración de Lisa" width="100%" class="centrarimg">
+                        <ul role="tree">
                             <li>Ocupación: <b>Curadora</b></li>
                             <li>Raza: <b>Humana</b></li>
                             <li>Habilidad principal: <b>Medicinas herbarias</b></li>
@@ -149,13 +197,13 @@
                     <div class="quitar-float"></div>
                 </div>
             </section>
-            <section>
-                <div class="l-col-6--pc quitar-float">
+            <section role="region">
+                <div class="l-col-6--pc quitar-float" tabindex="0">
                     <h2>Succubus</h2>
                     <p>Demonio inferior bajo la apariencia de una mujer. Atrapa a Alucard en una especie de dimensión de pesadilla, en la cual disfraza su apariencia verdadera para tratar de engañarlo.</p>
                     <div class="tabla-succubus">
-                        <img src="pics/Succubus.png" alt="" width="100%" class="centrarimg">
-                        <ul>
+                        <img src="pics/Succubus.png" alt="Ilustración de Succubus" width="100%" class="centrarimg">
+                        <ul role="tree">
                             <li>Ocupación: <b>Demonio</b></li>
                             <li>Raza: <b>Demonio inferior</b></li>
                             <li>Arma principal: <b>Garras</b></li>
@@ -165,13 +213,13 @@
                     <div class="quitar-float"></div>
                 </div>
             </section>
-            <section>
-                <div class="l-col-6--pc">
+            <section role="region">
+                <div class="l-col-6--pc" tabindex="0">
                     <h2>Death</h2>
                     <p>Es la mano derecha del conde Drácula. Cuando Alucard ingresa al castillo es confrontado por él y le quita toda sus elementos equipados esparciéndolos por todo el castillo.</p>
                     <div class="tabla-death">
-                        <img src="pics/Death.png" alt="" width="100%" class="centrarimg">
-                        <ul>
+                        <img src="pics/Death.png" alt="Ilustración de Death" width="100%" class="centrarimg">
+                        <ul role="tree">
                             <li>Ocupación: <b>Mano derecha de Drácula</b></li>
                             <li>Raza: <b>Desconocido</b></li>
                             <li>Arma principal: <b>Guadaña de la muerte</b></li>
@@ -181,13 +229,13 @@
                     <div class="quitar-float"></div>
                 </div>
             </section>
-            <section>
-                <div class="l-col-6--pc quitar-float">
+            <section role="region">
+                <div class="l-col-6--pc quitar-float" tabindex="0">
                     <h2>Shaft</h2>
                     <p>El sacerdote oscuro que manipula a Richter y busca revivir a Drácula por segunda vez en este siglo.</p>
-                    <div class="tabla-death">
-                        <img src="pics/Shaft.png" alt="" width="100%" class="centrarimg">
-                        <ul>
+                    <div class="tabla-shaft">
+                        <img src="pics/Shaft.png" alt="Ilustración de Shaft" width="100%" class="centrarimg">
+                        <ul role="tree">
                             <li>Ocupación: <b>Sacerdote oscuro</b></li>
                             <li>Raza: <b>Humano</b></li>
                             <li>Arma principal: <b>Magia y hechizos elementales</b></li>
@@ -197,13 +245,13 @@
                     <div class="quitar-float"></div>
                 </div>
             </section>
-            <section>
-                <div class="l-col-6--pc">
+            <section role="region">
+                <div class="l-col-6--pc" tabindex="0">
                     <h2>Drácula</h2>
                     <p>El amo del castillo demoníaco, antagonista principal y personaje jefe final. Enfrentado por Richter durante el preludio del videojuego y también por Alucard en su final.</p>
                     <div class="tabla-dracula">
-                        <img src="pics/Dracula.png" alt="" width="100%" class="centrarimg">
-                        <ul>
+                        <img src="pics/Dracula.png" alt="Ilustración de Drácula" width="100%" class="centrarimg">
+                        <ul role="tree">
                             <li>Ocupación: <b>Antagonista principal, Señor oscuro</b></li>
                             <li>Raza: <b>Vampiro</b></li>
                             <li>Arma principal: <b>Magia oscura</b></li>
@@ -215,59 +263,59 @@
             </section>
         </div>
         <!-- div Arsenal -->
-        <div class="seccion l-fila arsenal" id="arsenal">
+        <div class="seccion l-fila arsenal" id="arsenal" tabindex="0">
             <h1>Arsenal</h1>
             <hr>
             <div class="div-tabla-arsenal">
                 <table class="tabla-arsenal" summary="Tabla donde aparecen todas las espadas del juego, con su nombre, descripcion e imagen">
                     <caption>Espadas</caption>
                     <tbody>
-                    <tr>
+                    <tr tabindex="0">
                         <td><i>Crissaegrim</i></td>
                         <td class="descArma">Es vagamente similar al Yasutsuna, pero dispara ondas de vacío en lugar de cuchillas circulares. </td>
                         <td><div class="arma crissaegrim"></div></td>
                     </tr>
-                    <tr>
+                    <tr tabindex="0">
                         <td><i>Heaven Sword</i></td>
                         <td class="descArma">Se lanza hacia adelante y luego vuelve hacia ti, como un boomerang</td>
                         <td><div class="arma heavenSword"></div></td>
                     </tr>
-                    <tr>
+                    <tr tabindex="0">
                         <td><i>Jewel Sword</i></td>
                         <td class="descArma">Deja joyas como elementos al matar monstruos</td>
                         <td><div class="arma jewelSword"></div></td>
                     </tr>
-                    <tr>
+                    <tr tabindex="0">
                         <td><i>Marsil</i></td>
                         <td class="descArma">Espada llameante que puede golpear hasta cuatro veces con su fuego.</td>
                         <td><div class="arma marsil"></div></td>
                     </tr>
-                    <tr>
+                    <tr tabindex="0">
                         <td><i>Masamune</i></td>
                         <td class="descArma">Muy similar al Muramasa, excepto que no tiene la capacidad de chupar sangre fría.</td>
                         <td><div class="arma masamune"></div></td>
                     </tr>
-                    <tr>
+                    <tr tabindex="0">
                         <td><i>Mourneblade</i></td>
                         <td class="descArma">Soul Steal: cada vez que atacas a un enemigo, ganarás un pequeño porcentaje de vida.</td>
                         <td><div class="arma mourneblade"></div></td>
                     </tr>
-                    <tr>
+                    <tr tabindex="0">
                         <td><i>Muramasa</i></td>
                         <td class="descArma">Espada sedienta de sangre. Cuando está equipada, tendrás el hechizo Dark Metamorphosis</td>
                         <td><div class="arma muramasa"></div></td>
                     </tr>
-                    <tr>
+                    <tr tabindex="0">
                         <td><i>Osafune</i></td>
                         <td class="descArma">Un arma de dos manos, bastante fuerte. Contiene un movimiento de bola de fuego</td>
                         <td><div class="arma osafune"></div></td>
                     </tr>
-                    <tr>
+                    <tr tabindex="0">
                         <td><i>Rune Sword</i></td>
                         <td class="descArma">Con un ataque normal, sale de las manos de Alucard, vuela en un arco y regresa muy rápido.</td>
                         <td><div class="arma runeSword"></div></td>
                     </tr>
-                    <tr>
+                    <tr tabindex="0">
                         <td><i>Yasutsuna</i></td>
                         <td class="descArma">Muy rápida y poderosa, atacará con un círculo de cuchillas fulminantes frente a Alucard.</td>
                         <td><div class="arma yasutsuna"></div></td>
@@ -276,158 +324,218 @@
                 </table>
             </div>
         </div>
-        <div class="seccion l-fila bestiario" id="bestiario">
+        <div class="seccion l-fila bestiario" id="bestiario" tabindex="0">
             <h1>Bestiario</h1>
             <hr>
-            <section>
-                <div class="l-col-6--pc bestia">
-                    <h2>Beelzebub</h2>
-                <figure>
-                    <figcaption>
-                        Demonio
-                    </figcaption>
-                    <img src="pics/Beezelbub.png" alt="" class="centrarimg">
-                </figure>
-                    <h3>Origenes:</h3>
-                    <p>En la demonología cristiana, Beelzebub es uno de los siete príncipes del infierno, según los puntos de vista católicos.</p>
-                    <img src="pics/Beezelbub-mosca.png" alt="" class="imgchiquita-movil imgchiquita-tablet centrarimg">
-                    <p>El Dictionnaire Infernal lo describe como una mosca demoníaca a la que también se conoce como el "Señor de las moscas". En fuentes cristianas y bíblicas posteriores, se le conoce como otro nombre para el Diablo.</p>
-                    <div class="quitar-float"></div>
-                </div>
-                <div class="l-col-6--pc bestia">
-                    <h2>Cerberus</h2>
-                <figure>
-                    <figcaption>
-                        Monstruo
-                    </figcaption>
-                    <img src="pics/Cerberus.png" alt="" class="centrarimg">
-                </figure>                
-                <h3>Origenes: </h3>
-                <p>En la mitología griega, Cerberos (en griego Κέρβερος Kerberos, "demonio del pozo") era el perro de Hades. Era un monstruo canino de tres cabezas (aunque a veces se dice que tenía cincuenta o cien) y con una serpiente de muchas cabezas en lugar de cola.</p>
-                <img src="pics/cerberus-origins.jpg" alt="" class="imgchiquita-movil imgchiquita-tablet centrarimg">
-                <p>Cerberos custodiaba la puerta del Hades y se aseguraba de que los muertos no salieran y los vivos no pudieran entrar. Era hijo de Echidna y Typhon, y hermano de Orthrus, un Hellhound de dos cabezas.</p>
-                <div class="quitar-float"></div>
-                </div>
-                <div class="l-col-6--pc quitar-float bestia">
-                    <h2>Gaibon y Slogra</h2>
+            <section role="region">
+                <article role="article">
+                    <div class="l-col-6--pc bestia" tabindex="0">
+                        <h2>Beelzebub</h2>
+                        <figure>
+                            <figcaption>
+                                Demonio
+                            </figcaption>
+                            <img src="pics/Beezelbub.png" alt="Imagen de la representacion de Beelzebub en el juego" class="centrarimg">
+                        </figure>
+                        <h3>Origenes:</h3>
+                        <p>En la demonología cristiana, Beelzebub es uno de los siete príncipes del infierno, según los puntos de vista católicos.</p>
+                        <img src="pics/Beezelbub-mosca.png" longdesc="imagen de los origenes de Beelzebub. Se muestra una ilustración de la mosca que hace referencia a el demonio" class="imgchiquita-movil imgchiquita-tablet centrarimg"><a href="https://castlevania.fandom.com/wiki/Beelzebub" class="mas-informacion">Mas información
+                        <span> acerca de los origenes de Beelzebub</span></a>
+                        <div class="quitar-float"></div>
+                    </div>
+                </article>
+                <article role="article">
+                    <div class="l-col-6--pc bestia" tabindex="0">
+                        <h2>Cerberus</h2>
                     <figure>
                         <figcaption>
-                            Gárgolas
+                            Monstruo
                         </figcaption>
-                        <img src="pics/Gaibon.png" alt="" class="centrarimg">
-                        <img src="pics/Slogra.png" alt="" class="centrarimg">
+                        <img src="pics/Cerberus.png" alt="Imagen de la representación de Cerberus en el juego" class="centrarimg">
                     </figure>
                     <h3>Origenes: </h3>
-                    <p>En arquitectura, una gárgola es un grotesco tallado o formado con un pico diseñado para transportar agua desde un techo y alejarla del costado de un edificio.</p>
-                    <img src="pics/Gargola-origins.png" alt="" class="imgchiquita-movil imgchiquita-tablet centrarimg">
-                    <p>Evitando que el agua de lluvia corra por las paredes de mampostería y erosione el mortero entre ellas, las gárgolas suelen ser animales fantásticos alargados porque la longitud de la gárgola determina qué tan lejos se lanza el agua desde la pared.</p>
+                    <p>En la mitología griega, Cerberos (en griego Κέρβερος Kerberos, "demonio del pozo") era el perro de Hades. Era un monstruo canino de tres cabezas (aunque a veces se dice que tenía cincuenta o cien) y con una serpiente de muchas cabezas en lugar de cola.</p>
+                    <img src="pics/cerberus-origins.jpg" longdesc="Imagen de los origenes de Cerberus. La imagen muestra una ilustración de el mostruo, cogido con unas cuerdas por Hades." class="imgchiquita-movil imgchiquita-tablet centrarimg">
+                    <a href="https://castlevania.fandom.com/wiki/Cerberus" class="mas-informacion">Mas información
+                        <span> acerca de los origenes de Cerberus</span></a>
                     <div class="quitar-float"></div>
-                </div>
-                <div class="l-col-6--pc bestia">
-                    <h2>Hypogrifo</h2>
-                    <figure>
-                        <figcaption>
-                            Criatura mitológica
-                        </figcaption>
-                        <img src="pics/Hypograph.png" alt="" class="centrarimg">
-                    </figure>
-                    <h3>Origenes: </h3>
-                    <p>El hipogrifo es una criatura mitológica que nace del cruce entre un grifo y una yegua. Su cabeza, alas, pecho y patas delanteras son como las de un águila, características heredadas del padre, y el resto del cuerpo es como el de un caballo, como la madre. Dado que el grifo generalmente se representa como una criatura que detesta a los caballos, cazándolos y matándolos, puede ser difícil imaginar cómo podría concebirse un hipogrifo.</p>
-                    <img src="pics/Hippogryph-origins.png" alt="" class="imgchiquita-movil imgchiquita-tablet centrarimg">
-                    <p>El hipogrifo y el grifo se confunden con frecuencia entre sí. La principal diferencia entre ambas criaturas es que el Hipogrifo tiene el cuerpo de un caballo y el Grifo tiene el cuerpo de un león.</p>
-                    <div class="quitar-float"></div>
-                </div>
-                <div class="l-col-6--pc quitar-float bestia">
-                    <h2>Legion</h2>
-                    <figure>
-                        <figcaption>
-                            Demonio
-                        </figcaption>
-                        <img src="pics/Granfalloon.png" alt="" class="centrarimg">
-                    </figure>
-                    <h3>Origenes: </h3>
-                    <p>El origen del diseño de Legion proviene de un relato bíblico sobre un demonio –o varios demonios– que poseyó a un hombre. El Nuevo Testamento describe un encuentro en el que Jesús sanó a un hombre de Gadara poseído por demonios mientras viajaba, en un evento que llegó a conocerse como "el exorcismo del endemoniado de Gerasene".</p>
-                    <img src="pics/Legion-origins.png" alt="" class="imgchiquita-movil imgchiquita-tablet centrarimg">
-                    <p>Jesús se acercó y llamó al demonio para que saliera del hombre y le preguntó su nombre, a lo que el demonio respondió: "Mi nombre es Legión, porque somos muchos". Así, del concepto de estar compuesto por "muchos" surgió el diseño del caparazón compuesto por una gran cantidad de cuerpos humanos.</p>
-                    <div class="quitar-float"></div>
-                </div>
-                <div class="l-col-6--pc bestia">
-                    <h2>Malphas</h2>
-                    <figure>
-                        <figcaption>
-                            Demonio Oscuro
-                        </figcaption>
-                        <img src="pics/Malphas.png" alt="" class="centrarimg">
-                    </figure>
-                    <h3>Origenes: </h3>
-                    <p>Malphas se describe en el Ars Goetia como un poderoso "Gran Príncipe del Infierno", al mando de cuarenta legiones de demonios y siendo el segundo al mando de Satanás. Aparece como un cuervo, pero si se le solicita, se parecerá a un hombre con una voz ronca.</p>
-                    <img src="pics/Malphas-origins.png" alt="" class="imgchiquita-tablet imgchiquita-movil centrarimg">
-                    <p>Malphas se especializa en la construcción de casas, torres altas y fortalezas, derriba los edificios de los enemigos, puede destruir los deseos o pensamientos de los enemigos (y/o darlos a conocer al conjurador) y todo lo que han hecho, otorga buenos familiares y puede reunir rápidamente a artífices de todos los lugares del mundo.</p>
-                    <div class="quitar-float"></div>
-                </div>
-                <div class="l-col-6--pc quitar-float bestia">
-                    <h2>Minotauro</h2>
-                    <figure>
-                        <figcaption>
-                            Hombre bestia
-                        </figcaption>
-                        <img src="pics/Minotaur.png" alt="" class="centrarimg">
-                    </figure>
-                    <h3>Origenes: </h3>
-                    <p>En la mitología griega, el Minotauro era una criatura con cabeza de toro sobre el cuerpo de un hombre. Vivía en el centro del Laberinto, que era una elaborada construcción similar a un laberinto diseñada por el arquitecto Dédalo y su hijo Ícaro, por orden del rey Minos de Creta. El Minotauro finalmente fue asesinado por el héroe ateniense Teseo.</p>
-                    <img src="pics/Minotauro-origins.png" alt="" class="imgchiquita-movil imgchiquita-tablet centrarimg">
-                    <p>El término Minotauro deriva del griego antiguo Μῑνώταυρος, un compuesto del nombre Μίνως (Minos) y el sustantivo ταύρος "toro", traducido como "(el) Toro de Minos".</p>
-                    <div class="quitar-float"></div>
-                </div>
-                <div class="l-col-6--pc bestia">
-                    <h2>Scylla</h2>
-                    <figure>
-                        <figcaption>
-                            Monstruo marino
-                        </figcaption>
-                        <img src="pics/Scylla.png" alt="" class="centrarimg">
-                    </figure>
-                    <h3>Origenes: </h3>
-                    <p>En la mitología griega, Scylla era uno de los dos monstruos (el otro era Caribdis) que vivían a ambos lados de un estrecho canal de agua, conocido hoy como el Estrecho de Messina. Los dos lados del estrecho estaban al alcance de una flecha el uno del otro, tan cerca que los marineros que intentaban evitar a Caribdis pasarían demasiado cerca de Escila y viceversa.</p>
-                    <img src="pics/Scylla-origin.png" alt="" class="imgchiquita-movil imgchiquita-tablet centrarimg">
-                    <p>Era un monstruo marino horriblemente grotesco, con seis cuellos largos equipados con cabezas espeluznantes, cada una de las cuales contenía tres filas de dientes afilados. Su cuerpo constaba de doce patas caninas y la cola de un pez. Otros relatos la retratan con serpientes y perros ladrando en lugar de extremidades inferiores.</p>
-                    <div class="quitar-float"></div>
-                </div>            
-                <div class="l-col-6--pc quitar-float bestia">
-                    <h2>Hombrelobo</h2>
-                    <figure>
-                        <figcaption>
-                            Hombre Bestia
-                        </figcaption>
-                        <img src="pics/Werewolf.png" alt="" class="centrarimg">
-                    </figure>
-                    <h3>Origenes: </h3>
-                    <p>Un hombre lobo es un ser humano mitológico o folclórico con la capacidad de cambiar de forma a un lobo, ya sea a propósito o después de haber sido sometido a una maldición o aflicción (a menudo una mordedura o un arañazo de otro hombre lobo).</p>
-                    <img src="pics/Werewolf-origin.png" alt="" class="imgchiquita-movil imgchiquita-tablet centrarimg">
-                    <p>En la literatura y la mitología griega antigua se encuentran algunas referencias a hombres que se convierten en lobos. Los Neuri eran una tribu que se transformaba en lobos una vez al año durante varios días y luego volvía a su forma humana. Lycaon se transformó en lobo porque había asesinado ritualmente a un niño. Virgilio en un momento también escribió sobre seres humanos transformándose en lobos.</p>
-                    <div class="quitar-float"></div>
-                </div>
+                    </div>
+                </article>
+                <article role="article">
+                    <div class="l-col-6--pc quitar-float bestia" tabindex="0">
+                        <h2>Gaibon y Slogra</h2>
+                        <figure>
+                            <figcaption>
+                                Gárgolas
+                            </figcaption>
+                            <img src="pics/Gaibon.png" alt="Imagen de la reprentacion de Gaibon en el juego" class="centrarimg">
+                            <img src="pics/Slogra.png" alt="Imagen de la representación de Slogra en el juego" class="centrarimg">
+                        </figure>
+                        <h3>Origenes: </h3>
+                        <p>En arquitectura, una gárgola es un grotesco tallado o formado con un pico diseñado para transportar agua desde un techo y alejarla del costado de un edificio.</p>
+                        <img src="pics/Gargola-origins.png" longdesc="Fotografia de una la estatua de una gárgola en un edificio, haciendo referencia a sus orígenes" class="imgchiquita-movil imgchiquita-tablet centrarimg">
+                        <a href="https://es.wikipedia.org/wiki/G%C3%A1rgola" class="mas-informacion">Mas información
+                            <span> acerca de los origenes de las Gárgolas</span></a>
+                        <div class="quitar-float"></div>
+                    </div>
+                </article>
+                <article role="article">
+                    <div class="l-col-6--pc bestia" tabindex="0">
+                        <h2>Hypogrifo</h2>
+                        <figure>
+                            <figcaption>
+                                Criatura mitológica
+                            </figcaption>
+                            <img src="pics/Hypograph.png" alt="Respresentación del Hipogrifo en el juego" class="centrarimg">
+                        </figure>
+                        <h3>Origenes: </h3>
+                        <p>El hipogrifo es una criatura mitológica que nace del cruce entre un grifo y una yegua. Su cabeza, alas, pecho y patas delanteras son como las de un águila, características heredadas del padre, y el resto del cuerpo es como el de un caballo, como la madre. Dado que el grifo generalmente se representa como una criatura que detesta a los caballos, cazándolos y matándolos, puede ser difícil imaginar cómo podría concebirse un hipogrifo.</p>
+                        <img src="pics/Hippogryph-origins.png" longdesc="Imagen de una ilustracion donde aparece el Hipogrifo , y en su lomo montada una mujer y un caballero, el cual porta una gran espada." class="imgchiquita-movil imgchiquita-tablet centrarimg">
+                        <a href="https://castlevania.fandom.com/wiki/Hippogryph" class="mas-informacion">Mas información
+                            <span> acerca de los origenes del Hipogrifo</span></a>
+                        <div class="quitar-float"></div>
+                    </div>
+                </article>
+                <article role="article">
+                    <div class="l-col-6--pc quitar-float bestia" tabindex="0">
+                        <h2>Legion</h2>
+                        <figure>
+                            <figcaption>
+                                Demonio
+                            </figcaption>
+                            <img src="pics/Granfalloon.png" alt="Representación de Legion en el juego" class="centrarimg">
+                        </figure>
+                        <h3>Origenes: </h3>
+                        <p>El origen del diseño de Legion proviene de un relato bíblico sobre un demonio –o varios demonios– que poseyó a un hombre. El Nuevo Testamento describe un encuentro en el que Jesús sanó a un hombre de Gadara poseído por demonios mientras viajaba, en un evento que llegó a conocerse como "el exorcismo del endemoniado de Gerasene".</p>
+                        <img src="pics/Legion-origins.png" longdesc="Imagen de una ilustración en la cual se hace referencia a los origenes de Legion. En ella aparece Jesucristo sanando a un hombre supuestamente poseido por este demonio. A este evento se le conoce como el exorcismo del endemoniado de Gerasene" class="imgchiquita-movil imgchiquita-tablet centrarimg">
+                        <a href="https://castlevania.fandom.com/es/wiki/Legion" class="mas-informacion">Mas información
+                            <span> acerca de los origenes de Legion</span></a>
+                        <div class="quitar-float"></div>
+                    </div>
+                </article>
+                <article role="article">
+                    <div class="l-col-6--pc bestia" tabindex="0">
+                        <h2>Malphas</h2>
+                        <figure>
+                            <figcaption>
+                                Demonio Oscuro
+                            </figcaption>
+                            <img src="pics/Malphas.png" alt="Representación de Malphas en el juego" class="centrarimg">
+                        </figure>
+                        <h3>Origenes: </h3>
+                        <p>Malphas se describe en el Ars Goetia como un poderoso "Gran Príncipe del Infierno", al mando de cuarenta legiones de demonios y siendo el segundo al mando de Satanás. Aparece como un cuervo, pero si se le solicita, se parecerá a un hombre con una voz ronca.</p>
+                        <img src="pics/Malphas-origins.png" longdesc="Imagen de una ilustración de Malphas. En ella se aprecia un cuervo, vestido con unos pantalones naranjas y portando una especie de pala en su mano derecha." class="imgchiquita-tablet imgchiquita-movil centrarimg">
+                        <a href="https://castlevania.fandom.com/wiki/Malphas" class="mas-informacion">Mas información
+                            <span> acerca de los origenes de Malphas</span></a>
+                        <div class="quitar-float"></div>
+                    </div>
+                </article>
+                <article role="article">
+                    <div class="l-col-6--pc quitar-float bestia" tabindex="0">
+                        <h2>Minotauro</h2>
+                        <figure>
+                            <figcaption>
+                                Hombre bestia
+                            </figcaption>
+                            <img src="pics/Minotaur.png" alt="Representación de el Minotauro en el juego" class="centrarimg">
+                        </figure>
+                        <h3>Origenes: </h3>
+                        <p>En la mitología griega, el Minotauro era una criatura con cabeza de toro sobre el cuerpo de un hombre. Vivía en el centro del Laberinto, que era una elaborada construcción similar a un laberinto diseñada por el arquitecto Dédalo y su hijo Ícaro, por orden del rey Minos de Creta. El Minotauro finalmente fue asesinado por el héroe ateniense Teseo.</p>
+                        <img src="pics/Minotauro-origins.png" longdesc="Imagen de una ilustración de un Minotauro. Se aprecia a la criatura apoyada en un balcón, mirando a lo que parece ser el mar. El rostro aparece de perfil." class="imgchiquita-movil imgchiquita-tablet centrarimg">
+                        <a href="https://castlevania.fandom.com/wiki/Minotaur" class="mas-informacion">Mas información
+                            <span> acerca de los origenes del Minotauro</span></a>
+                        <div class="quitar-float"></div>
+                    </div>
+                </article>
+                <article role="article">
+                    <div class="l-col-6--pc bestia" tabindex="0">
+                        <h2>Scylla</h2>
+                        <figure>
+                            <figcaption>
+                                Monstruo marino
+                            </figcaption>
+                            <img src="pics/Scylla.png" alt="Representación de Scylla en el juego" class="centrarimg">
+                        </figure>
+                        <h3>Origenes: </h3>
+                        <p>En la mitología griega, Scylla era uno de los dos monstruos (el otro era Caribdis) que vivían a ambos lados de un estrecho canal de agua, conocido hoy como el Estrecho de Messina. Los dos lados del estrecho estaban al alcance de una flecha el uno del otro, tan cerca que los marineros que intentaban evitar a Caribdis pasarían demasiado cerca de Escila y viceversa.</p>
+                        <img src="pics/Scylla-origin.png" longdesc="Imagen de una ilustración de Scylla en las aguas. Se ve al mostruo marino, con las seis cabezas a su alrededor." class="imgchiquita-movil imgchiquita-tablet centrarimg">
+                        <a href="https://castlevania.fandom.com/wiki/Scylla" class="mas-informacion">Mas información
+                            <span> acerca de los origenes de Scylla</span></a>
+                        <div class="quitar-float"></div>
+                    </div>
+                </article>          
+                <article role="article">
+                    <div class="l-col-6--pc quitar-float bestia" tabindex="0">
+                        <h2>Hombrelobo</h2>
+                        <figure>
+                            <figcaption>
+                                Hombre Bestia
+                            </figcaption>
+                            <img src="pics/Werewolf.png" alt="Representación de el hombrelobo en el juego" class="centrarimg">
+                        </figure>
+                        <h3>Origenes: </h3>
+                        <p>Un hombre lobo es un ser humano mitológico o folclórico con la capacidad de cambiar de forma a un lobo, ya sea a propósito o después de haber sido sometido a una maldición o aflicción (a menudo una mordedura o un arañazo de otro hombre lobo).</p>
+                        <img src="pics/Werewolf-origin.png" longdesc="Imagen de una ilutración en blanco y negro donde aparece un hombrelobo devorando a una mujer." class="imgchiquita-movil imgchiquita-tablet centrarimg">
+                        <a href="https://castlevania.fandom.com/wiki/Werewolf" class="mas-informacion">Mas información
+                            <span> acerca de los origenes del Hombrelobo</span></a>
+                        <div class="quitar-float"></div>
+                    </div>
+                </article>
+            </section>
         </div>
-        <div class="formulario">
-            <form action="">
-
+        <div class="seccion formulario" role="form" tabindex="0">
+            <h1>Formulario</h1>
+            <hr>
+            <p>En este formulario, podrás registrarte para crear una cuenta en un futuro foro en desarrollo para debatir acerca de Castlevania SOTN. ¿A qué esperas?</p>
+            <form action="" name="formulario">
+                <fieldset>
+                    <legend>Datos de registro</legend>
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" id="nombre" name="nombre">
+                    <br>
+                    <label for="apellidos">Apellidos: </label>
+                    <input type="text" id="apellidos" name="apellidos">
+                    <br>
+                    <br>
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email">
+                    <br>
+                    <label for="pass">Contraseña: </label>
+                    <input type="password" id="pass" name="pass">
+                    <br>
+                    <br>
+                    <label for="rol">Rol:</label>
+                    <select name="rol" id="rol">
+                        <option value="luz" role="Itemtree">Luz</option>
+                        <option value="sombra" role="Itemtree">Sombra</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="fecha">Fecha de Nacimiento: </label>
+                    <input type="date" id="fecha" name="fecha">
+                    <br>                 
+                    <textarea name="observaciones" placeholder="Observaciones o cosas que te gustaría que hubiera en el foro" id="observaciones" cols="30" rows="10"></textarea>
+                    <button id="btn-submit" type="submit">Enviar datos</button>
+                </fieldset>
             </form>
         </div>
     </main>
-    <footer>
-        <div class="l-fila footer">
+    <footer role="contentinfo">
+        <div class="l-fila footer" tabindex="0">
             <img src="pics/castlevania_footer.png" alt="" class="img-footer centrarimg">
             <div class="l-fila">
-                <div class="l-col-4 rrss">
-                    <a href=""><img src="sprites/facebook.svg" alt=""></a>
-                    <a href=""><img src="sprites/twitter.svg" alt=""></a>
-                    <a href=""><img src="sprites/insta.svg" alt=""></a>
+                <div class="l-col-4 rrss igualar-columnas">
+                    <a href="" ><img src="sprites/facebook.svg" alt="Visitar página de facebook" aria-label="Visitar la página de facebook"></a>
+                    <a href=""><img src="sprites/twitter.svg" alt="Visitar página de twitter" aria-label="Visitar la página de twitter"></a>
+                    <a href=""><img src="sprites/insta.svg" alt="Visitar página de Instagram" aria-label="Visitar la página de Instragram"></a>
                 </div>
-                <div class="l-col-4">
-                    <span>Página creada por: <br>Adrián García</span>
+                <div class="l-col-4 igualar-columnas" tabindex="0">
+                    <span>Página creada por: <br>Adrián García</span><br>
+                    <a href="" id="enlace-bibliografia">Fuentes y agradecimientos</a>
                 </div>
-                <div class="l-col-4">
-                    <a href="" onclick="bibliografia()">Fuentes y agradecimientos</a>
+                <div class="l-col-4 igualar-columnas" tabindex="0">
+                    <a href="declaracion-accesibilidad.html" id="declaracion-accesibilidad">Declaración de accesibilidad</a>
+                    <img class="img-accesibilidad" src="pics/accesibility.png" alt="Nivel de accesibilidad: WAI-AA">
                 </div>
             </div>
         </div>
